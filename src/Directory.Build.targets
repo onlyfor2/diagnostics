@@ -10,10 +10,4 @@
   <ItemGroup>
     <EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)"/>
   </ItemGroup>
-
-  <!-- Remove this once arcade version is bumped -->
-  <Target Name="_PublishPackageReferences"
-          AfterTargets="PostBuildEvent"
-          Condition="$(IsPublishable) == 'true'"
-          DependsOnTargets="$(_BeforePublishNoBuildTargets);$(_CorePublishTargets)" />
 </Project>
